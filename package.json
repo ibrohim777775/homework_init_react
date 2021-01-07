@@ -1,0 +1,23 @@
+{
+  "name": "homework_05_12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibrohim777775/homework_init_react.git"
+  },
+  "author": "Bobojonov Ibrohim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibrohim777775/homework_init_react/issues"
+  },
+  "homepage": "https://github.com/ibrohim777775/homework_init_react#readme",
+  "devDependencies": {
+    "jquery": "^3.5.1",
+    "progressbar.js": "^1.1.0"
+  }
+}
