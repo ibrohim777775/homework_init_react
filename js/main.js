@@ -11,25 +11,25 @@
 
 // import ProgressBar from "progressbar.js";
 
-$(document).ready(function(){
+$(document).ready(function () {
     // Show hide popover
-    $(".for_more").click(function(){
+    $(".for_more").click(function () {
         $(this).find(".for_more-items").slideToggle();
     });
 });
-$(document).on("click", function(event){
-    let $trigger = $("header");
-    if($trigger !== event.target && !$trigger.has(event.target).length){
+$(document).on("click", function (event) {
+    let $trigger = $("body");
+    if ($trigger !== event.target && !$trigger.has(event.target).length) {
         $(".for_more-items").slideUp();
     }
 });
 
 
 // noinspection JSFunctionExpressionToArrowFunction
-(function($) {
-    $(function() {
+(function ($) {
+    $(function () {
 
-        $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+        $('ul.tabs__caption').on('click', 'li:not(.active)', function () {
             $(this)
                 .addClass('active').siblings().removeClass('active')
                 .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
