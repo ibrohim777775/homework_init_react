@@ -1,4 +1,4 @@
-@import url(progresbar.css);
+    @import url(progresbar.css);
     * {
         box-sizing: border-box;
         margin: 0;
@@ -65,7 +65,7 @@
         display: flex;
         align-items: center;
     }
-    
+
     .second_nav {
         position: absolute;
         background-color: #fff;
@@ -185,8 +185,11 @@
         color: lightseagreen;
         top: 2px;
         cursor: pointer;
+        left: -3px;
     }
-    
+
+
+
     .search_inners{
         /*display: flex;*/
         /*align-items: center;*/
@@ -343,4 +346,81 @@
         transform: scale(.4);
         top: 118px;
         left: -74px;
+    }
+    
+    .join_inners{
+        background-image: url(../images/footer_image.jpg);
+        background-size: cover;
+        height: 280px;
+        margin-bottom: 35px;
+        padding: 25px 25px 25px 40px;
+    }
+    .join_title{
+        color: #fff;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    .join_bilmadim{
+        display: flex;
+        justify-content: space-between;
+    }
+    .join_items{
+        flex: 2;
+        margin-right: 25px;
+    }
+    .join_text{
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+    .sign_up{
+        color: #fff;
+        font-size: 18px;
+        padding: 15px 20px;
+        background-color: #805BE7;
+        border-radius: 4px;
+    }
+    .join_ul{
+        flex: 1;
+    }
+    .join_ul ul li{
+        list-style-type: disc;
+        color: #fff;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        background-color: #032540;
+        padding: 45px ;
+    }
+    .footer_inners{
+        display: flex;
+    }
+    .footer_items{
+        display: flex;
+        flex-direction: column;
+        margin-right: 50px;
+    }
+    .join_community{
+        text-transform: uppercase;
+        font-size: 20px;
+        color: deepskyblue;
+        padding: 10px 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        font-weight: 900;
+        margin-top: 25px;
+    }
+    .footer_title{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 15px;
+    }
+    .footer_links{
+        color: #fff;
+        margin-bottom: 7px;
     }
