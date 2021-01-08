@@ -18,7 +18,7 @@ $(document).ready(function () {
     });
 });
 $(document).on("click", function (event) {
-    let $trigger = $("body");
+    let $trigger = $("header");
     if ($trigger !== event.target && !$trigger.has(event.target).length) {
         $(".for_more-items").slideUp();
     }
