@@ -1,0 +1,86 @@
+
+.search{
+    border-bottom: 1px solid #b1b1b1;
+    padding: 10px;
+}
+.search__text{
+    width: 100%;
+    outline: none;
+    border: none;
+    /* position: relative; */
+    padding-left: 35px;
+    color: #b1b1b1;
+    font-size: 22px;
+    font-style: italic;
+}
+.for__icon{
+    position: relative;
+}
+.for__icon:before{
+    position: absolute;
+    content: "\e90c";
+    font-family: 'icomoon' !important;
+    width: 25px;
+    height: 25px;
+    color: #000;
+
+}
+.search__text input[type=search]{
+    width: 100%;
+    outline: none;
+    border: none;
+}
+.search__text input[type=search]:focus{
+    outline: none;
+    border: none;
+
+}
+
+
+.suggestions__links{
+    display:block;
+/*removing underlines from anchor element*/
+    text-decoration:none; 
+    color:#fff;
+    font-size:18px;
+    background-color:#032540;
+    padding:8px;
+}
+.suggestions{
+
+    list-style:none;
+    padding:0;
+    /* display: none; */
+}
+
+.suggestions__items{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    /* display: none; */
+}
+
+.suggestions__items:hover{
+/*transform*/
+-webkit-transform:translateX(20px);
+   -moz-transform:translateX(20px);
+    -ms-transform:translateX(20px);
+     -o-transform:translateX(20px);
+        transform:translateX(20px);
+}
+/*now first we will hide the suggestion list*/
+.suggestions__items{
+    overflow:hidden;
+    /* height:0; */
+    /* height:45px; */
+
+    -webkit-transition:all 0.3s ease-in-out;
+   -moz-transition:all 0.3s ease-in-out;
+     -o-transition:all 0.3s ease-in-out;
+        transition:all 0.3s ease-in-out;
+}
+/*and make the suggestion reappear when user focus on search field*/
+/* input[type="search"]:focus  .suggestions{ */
+    /* display: block; */
+
+/* } */

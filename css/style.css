@@ -19,7 +19,7 @@
     }
     
     .container {
-        width: 1150px;
+        width: 1300px;
         margin: 0 auto;
         padding: 0 10px;
         /*overflow: hidden;*/
@@ -236,13 +236,29 @@
         outline: none;
     }
     .search_items button[type=submit]{
-        background-color: pink;
+        /* background-color: pink; */
         border-radius: 45px;
-        padding: 15px;
+        padding: 15px 25px;
         font-size: 18px;
         cursor: pointer;
-    }
+        position: absolute;
+        right: 15px;
+        background: #febbbb; /* Old browsers */
+        background: -moz-linear-gradient(top, #febbbb 0%, #ff5c5c 94%, #ff5c5c 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #febbbb 0%,#ff5c5c 94%,#ff5c5c 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #febbbb 0%,#ff5c5c 94%,#ff5c5c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        font-weight: 800;
+        transition: all .2s;
 
+    }
+    .search_items button[type=submit]:focus{
+        outline: none;
+    }
+    .search_items button[type=submit]:hover{
+        background-color: pink;
+        color: #fff;
+        transition: all .2s;
+    }
 
     .tabs__content {
         display: none; /* по умолчанию прячем все блоки */

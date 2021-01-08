@@ -1,3 +1,4 @@
+"use strict";
 //
 // function showDisplay() {
 //     document.getElementById("for_more-items").style.display="block";
@@ -53,3 +54,31 @@ $(document).on("click", function (event) {
 
 
 document.querySelector('.radial-progress').setAttribute('data-progress', 83);
+
+// function for search
+// $(document)(function () {
+//     $("#myInput").on("keyup", function () {
+//         var value = $(this).val().toLowerCase();
+//         $(".suggestions__links").filter(function () {
+//             $(this).css('display', 'none')($(this).text().toLowerCase().indexOf(value) > -1)
+//         });
+//     });
+// });
+// let searchText = document.getElementById('myInput').innerText;
+// let searchKeys = document.getElementsByClassName('suggestions_items').innerText;
+// console.log(searchText);
+// console.log(searchKeys);
+// function search() {
+
+// }
+
+jQuery(document).ready(function () {
+    $("#myInput").on("keyup", function () {
+        let value = $(this).val().toLowerCase();
+        $("#myDIV *").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+
+
