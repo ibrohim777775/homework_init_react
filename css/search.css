@@ -50,7 +50,7 @@
 
     list-style:none;
     padding:0;
-    /* display: none; */
+    display: none;
 }
 
 .suggestions__items{
@@ -80,7 +80,7 @@
         transition:all 0.3s ease-in-out;
 }
 /*and make the suggestion reappear when user focus on search field*/
-/* input[type="search"]:focus  .suggestions{ */
-    /* display: block; */
+input[type="search"]:focus  .suggestions{ 
+    display: block;
+}
 
-/* } */
