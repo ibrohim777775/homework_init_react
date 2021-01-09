@@ -53,7 +53,7 @@ $(document).on("click", function (event) {
 
 
 
-document.querySelector('.radial-progress').setAttribute('data-progress', 83);
+document.querySelector('.radial-progress').setAttribute('data-progress', 68);
 
 // function for search
 // $(document)(function () {

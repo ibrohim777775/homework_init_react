@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Movie DateBase</title>
+    <link rel="stylesheet" href="css/style_icomoon.css">
+    <link rel="stylesheet" href="css/progresbar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/movieinfo.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header">
+                <nav class="header_menu">
+                    <div class="header_logo">
+                        <a href="#" class="logo_link"><img class="logo" src="images/logo.svg" alt="logo"></a>
+                    </div>
+                    <div class="header_inners">
+                        <ul class="header_links">
+                            <li><a class="header_links-inners" href="#">Movies</a>
+                                <ul class="second_nav">
+                                    <li><a class="second_menu" href="#">Popular</a></li>
+                                    <li><a class="second_menu" href="#">Now playing</a></li>
+                                    <li><a class="second_menu" href="#">Upcoming</a></li>
+                                    <li><a class="second_menu" href="#">Top Rated</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="header_links-inners" href="#">TV Shows</a>
+                                <ul class="second_nav">
+                                    <li><a class="second_menu" href="#">Popular</a></li>
+                                    <li><a class="second_menu" href="#">Airing Today</a></li>
+                                    <li><a class="second_menu" href="#">On TV</a></li>
+                                    <li><a class="second_menu" href="#">Top Rated</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="header_links-inners" href="#">People</a>
+                                <ul class="second_nav">
+                                    <li><a class="second_menu" href="#">Popular People</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="header_links-inners" href="#">More</a>
+                                <ul class="second_nav">
+                                    <li><a class="second_menu" href="#">Discussions</a></li>
+                                    <li><a class="second_menu" href="#">Leaderboard</a></li>
+                                    <li><a class="second_menu" href="#">Support</a></li>
+                                    <li><a class="second_menu" href="#">API</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="right_nav">
+                    <div class="right_nav-inners">
+                        <div class="for_more">+
+                            <div class="for_more-items">Can't find a movie or TV show?<br>Login to create it.</div>
+                            <div id="for_border"></div>
+                        </div>
+
+                        <div class="for_language for_more">EN
+                            <div class="for_more-items for_language-items">
+                                <div class="for_language-title">Language Preferences</div>
+                                <div class="language_buttons">
+                                    <a href="#" class="default_language">Deafult Language</a>
+                                    <a href="#" class="reset_language">Reset</a>
+                                </div>
+                                <div class="language_search">English(en-US)
+                                    <div class="language_inners">
+                                        <form class="input_search">
+                                            <input type="text" name="search_language">
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a class="header_links-inners" href="#">Login</a>
+                        <a class="header_links-inners" href="#">Join TMDb</a>
+                        <div class="right_nav-search"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End of header -->
+
+
+    <div class="navbar">
+        <div class="navbar__inners">
+
+            <ul class="header_links">
+
+                <li class="active"><a class="header_links-inners navbar__links" href="#">Owerview</a>
+                    <ul class="second_nav">
+                        <li><a class="second_menu" href="#">Main</a></li>
+                        <li><a class="second_menu" href="#">Alternative Titles</a></li>
+                        <li><a class="second_menu" href="#">Cast&Craw</a></li>
+                        <li><a class="second_menu" href="#">Relase Dates</a></li>
+                        <li><a class="second_menu" href="#">Translations</a></li>
+                        <li><a class="second_menu" href="#">Watch Now</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a class="header_links-inners navbar__links" href="#">Media</a>
+                    <ul class="second_nav">
+                        <li><a class="second_menu" href="#">Backdrops</a></li>
+                        <li><a class="second_menu" href="#">Logos</a></li>
+                        <li><a class="second_menu" href="#">Posters</a></li>
+                        <li><a class="second_menu" href="#">Videos</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="header_links-inners navbar__links" href="#">Fandom</a>
+                    <ul class="second_nav">
+                        <li><a class="second_menu" href="#">Discussions</a></li>
+                        <li><a class="second_menu" href="#">Reviews</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="header_links-inners navbar__links" href="#">Share</a>
+                    <ul class="second_nav">
+                        <li><a class="second_menu" href="#">Share link</a></li>
+                        <li><a class="second_menu" href="#">Facebook</a></li>
+                        <li><a class="second_menu" href="#">Tweet</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <main>
+        <div class="for__bg">
+            <div class="container">
+                <div class="main__inners">
+
+                    <div class="movies_img">
+                        <img src="images/movie_bg_little.jpg" alt="movie" width="300" height="450px" class="img">
+                        <div class="for__others">
+                            <img src="images/icon_play_small.jpg" width="36px" height="36px" alt="playing">
+                            <div class="for__watch">
+                                <p>Now Streaming</p>
+                                <a href="#" class="movie__stream">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="movies__info">
+
+                        <h1 class="movies__title">
+                            Honest Thief (2020)
+                        </h1>
+
+                        <div class="movies__topics">
+                            <span>PG-13</span>
+                            <p class="movies__made">10/16/2020</p>
+                            <ul class="topics__inner">
+                                <li>
+                                    <a href="#">Action,</a>
+                                    <a href="#">Thriller,</a>
+                                    <a href="#">Crime,</a>
+                                    <a href="#">Drama</a>
+                                </li>
+                                <li class="movie__duration">1h 38m</li>
+                            </ul>
+                        </div>
+
+                        <div class="prog">
+
+                            <div class="progres">
+                                <div class="radial-progress" data-progress="68">
+                                    <div class="circle">
+                                        <div class="mask full">
+                                            <div class="fill"></div>
+                                        </div>
+                                        <div class="mask half">
+                                            <div class="fill"></div>
+                                            <div class="fill fix"></div>
+                                        </div>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <div class="inset">
+                                        <div class="percentage">
+                                            <div class="numbers">
+                                                <span>-</span><span>0%</span><span>1%</span><span>2%</span><span>3%</span><span>4%</span><span>5%</span><span>6%</span><span>7%</span><span>8%</span><span>9%</span><span>10%</span><span>11%</span><span>12%</span><span>13%</span><span>14%</span><span>15%</span><span>16%</span><span>17%</span><span>18%</span><span>19%</span><span>20%</span><span>21%</span><span>22%</span><span>23%</span><span>24%</span><span>25%</span><span>26%</span><span>27%</span><span>28%</span><span>29%</span><span>30%</span><span>31%</span><span>32%</span><span>33%</span><span>34%</span><span>35%</span><span>36%</span><span>37%</span><span>38%</span><span>39%</span><span>40%</span><span>41%</span><span>42%</span><span>43%</span><span>44%</span><span>45%</span><span>46%</span><span>47%</span><span>48%</span><span>49%</span><span>50%</span><span>51%</span><span>52%</span><span>53%</span><span>54%</span><span>55%</span><span>56%</span><span>57%</span><span>58%</span><span>59%</span><span>60%</span><span>61%</span><span>62%</span><span>63%</span><span>64%</span><span>65%</span><span>66%</span><span>67%</span><span>68%</span><span>69%</span><span>70%</span><span>71%</span><span>72%</span><span>73%</span><span>74%</span><span>75%</span><span>76%</span><span>77%</span><span>78%</span><span>79%</span><span>80%</span><span>81%</span><span>82%</span><span>83%</span><span>84%</span><span>85%</span><span>86%</span><span>87%</span><span>88%</span><span>89%</span><span>90%</span><span>91%</span><span>92%</span><span>93%</span><span>94%</span><span>95%</span><span>96%</span><span>97%</span><span>98%</span><span>99%</span><span>100%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <h2 class="score">User <br> Score</h2>
+
+                            <div class="for__tooltip">
+                                <div class="tooltip custom_list ">
+                                    <span class="icon-th-list"></span>
+                                    <div class="tooltiptext">Login to create and edit custom lists</div>
+                                </div>
+                            </div>
+
+                            <div class="for__tooltip">
+                                <div class="tooltip custom_list ">
+                                    <span class="icon-heart"></span>
+                                    <div class="tooltiptext">Login to add this movie to your favorite list </div>
+                                </div>
+                            </div>
+
+                            <div class="for__tooltip">
+                                <div class="tooltip custom_list ">
+                                    <span class="icon-bookmark"></span>
+                                    <div class="tooltiptext">Login to add this movie to your watch list</div>
+                                </div>
+                            </div>
+
+                            <div class="for__tooltip">
+                                <div class="tooltip custom_list ">
+                                    <span class="icon-star-full"></span>
+                                    <div class="tooltiptext">Login to rate this movie</div>
+                                </div>
+                            </div>
+
+                            <button class="play__trailer">Play Trailer</button>
+
+                        </div>
+
+                        <p class="more__text">Never steal a man's second chance.</p>
+                        <h4 class="more__title">Overview</h4>
+                        <p class="overview__text">
+                            A bank robber tries to turn himself in because he's falling in love and wants to live an
+                            honest life...but when he
+                            realizes the Feds are more corrupt than him, he must fight back to clear his name.
+                        </p>
+                        <div class="more__links">
+                            <div class="movie__person">
+                                <a href="#" class="person__link">Mark Williams</a>
+                                <h5 class="person__jobs">Director, Writer</h5>
+                            </div>
+                            <div class="movie__person">
+                                <a href="#" class="person__link">Steve Allrich</a>
+                                <h5 class="person__jobs">Writer</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_inners">
+
+            <div class="footer_items">
+                <a href="#" class="footer_link"><img src="images/logo_footer.svg" alt="logo" width="150px"
+                        height="110px"></a>
+                <a href="#" class="join_community">Join The Community</a>
+            </div>
+
+            <div class="footer_items">
+                <h4 class="footer_title">THE BASICS</h4>
+                <a href="" class="footer_links">About TMDb</a>
+                <a href="" class="footer_links">Contact Us</a>
+                <a href="" class="footer_links">Support Forums</a>
+                <a href="" class="footer_links">API</a>
+                <a href="" class="footer_links">System Status</a>
+            </div>
+
+            <div class="footer_items">
+                <h4 class="footer_title">GET INVOLVED</h4>
+                <a href="" class="footer_links">Contribution Bible</a>
+                <a href="" class="footer_links">3rd Party Applications</a>
+                <a href="" class="footer_links">Add New Movie</a>
+                <a href="" class="footer_links">Add New TV Show</a>
+            </div>
+
+            <div class="footer_items">
+                <h4 class="footer_title">Community</h4>
+                <a href="" class="footer_links">Guidelines</a>
+                <a href="" class="footer_links">Discussions</a>
+                <a href="" class="footer_links">Leaderboard</a>
+                <a href="" class="footer_links">Twiiter</a>
+            </div>
+
+            <div class="footer_items">
+                <h4 class="footer_title">Legal</h4>
+                <a href="" class="footer_links">Terms Of Use</a>
+                <a href="" class="footer_links">API Terms of Use</a>
+                <a href="" class="footer_links">Privacy Policy</a>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End of footer -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/movieinfo.js"></script>
+</body>
+
+</html>

@@ -7,3 +7,25 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() > 15) {
+            $("search").css("transition", "all .4s");
+            $(".search").css("margin-top", "-65px");
+        } else {
+            $("search").css("transition", "all .4s");
+            $(".search").css("margin-top", "0");
+
+        }
+    });
+});
+
+// $(document).ready(function () {
+//     $(window).scroll(function () {
+//         if ($(document).scrollTop() > 25) {
+//             $("header").toggle;
+//         }
+
+
+//     });
+// });

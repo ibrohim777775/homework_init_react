@@ -1,8 +1,15 @@
 
 .search{
-    border-bottom: 1px solid #b1b1b1;
+    border: 1px solid #b1b1b1;
     padding: 10px;
+    position: fixed;
+    z-index: 45;
+    background-color: #fff;
+    width: 100%;
+
 }
+
+
 .search__text{
     width: 100%;
     outline: none;
@@ -23,7 +30,7 @@
     width: 25px;
     height: 25px;
     color: #000;
-
+    top: 3px;
 }
 .search__text input[type=search]{
     width: 100%;
@@ -68,19 +75,113 @@
      -o-transform:translateX(20px);
         transform:translateX(20px);
 }
-/*now first we will hide the suggestion list*/
 .suggestions__items{
     overflow:hidden;
-    /* height:0; */
-    /* height:45px; */
+    
 
     -webkit-transition:all 0.3s ease-in-out;
    -moz-transition:all 0.3s ease-in-out;
      -o-transition:all 0.3s ease-in-out;
         transition:all 0.3s ease-in-out;
 }
-/*and make the suggestion reappear when user focus on search field*/
 input[type="search"]:focus  .suggestions{ 
     display: block;
 }
 
+.search__inners{
+    display: flex;
+    margin-top: 45px;
+}
+.search__sidebar{
+    flex: 1;
+}
+.search__results{
+    flex: 3;
+    
+}
+.sidebar__inners{
+    border-radius: 8px;
+    border: 1px solid #a1a1a1;
+    margin-right: 35px;
+    padding-bottom: 10px;
+}
+.sidebar__title{
+    padding: 25px 0 25px 15px;
+    background-color: #01B4E4;
+    color: #fff;
+    letter-spacing: .8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+
+}
+.search__topics{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.result__link, .result__numbers{
+    color: #000;
+}
+.result__link{
+    font-size: 18px;
+    /* font-weight: 600; */
+}
+.result__numbers{
+    font-size: 16px;
+    padding: 5px 12px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+.search__topics:hover{
+    background-color: #f1f1f1;
+}
+.search__topics:hover .result__numbers{
+    background-color: #fff;
+}
+.active{
+    font-weight: 600;
+}
+.search__info{
+    margin: 25px 0;
+    color: #666666;
+}
+.search__info img{
+    font-size: 22px;
+    object-fit: cover;
+}
+
+
+.search__items{
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid rgb(227,227,227);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: 141px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.movie_image{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    height: 100%;
+}
+.movie__title{
+    color: #000;
+}
+.movies__info{
+    margin: 20px 15px;
+    overflow: hidden;
+}
+.movies__date{
+    margin: 5px 0;
+    color: #a1a1a1;
+    font-size: 14px;
+}
+.movies__text{
+    margin: 20px 0;
+}
