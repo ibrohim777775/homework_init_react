@@ -30,7 +30,7 @@
 }
 .radial-progress .circle .mask .fill {
     clip: rect(0px, 60px, 120px, 0px);
-    background-color: #97a71d;
+    background-color: #21d07a;
 }
 .radial-progress .inset {
     width: 90px;
@@ -38,12 +38,12 @@
     position: absolute;
     margin-left: 15px;
     margin-top: 15px;
-    background-color: #fbfbfb;
+    background-color: #032540;
     border-radius: 50%;
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2);
 }
 .radial-progress .inset .percentage {
-    height: 22px;
+    height: 30px;
     width: 57px;
     overflow: hidden;
     position: absolute;
@@ -52,7 +52,7 @@
     line-height: 1;
 }
 .radial-progress .inset .percentage .numbers {
-    margin-top: -22px;
+    margin-top: -28px;
     transition: width 1s;
 }
 .radial-progress .inset .percentage .numbers span {
@@ -61,9 +61,9 @@
     vertical-align: top;
     text-align: center;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 28px;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #97a71d;
+    color: #fff;
 }
 .radial-progress[data-progress="0"] .circle .mask.full,
 .radial-progress[data-progress="0"] .circle .fill {
