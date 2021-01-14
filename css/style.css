@@ -308,11 +308,11 @@
         border-radius: 45px;
     }
     .tabs_title{
-        font-size: 20px;
+        font-size: 18px;
         color: #032540;
         margin: 0 10px;
         cursor: pointer;
-        padding: 8px 15px;  
+        padding: 6px 20px;  
     }
     .tabs_title:first-child{
         margin-left: 0;
