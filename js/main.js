@@ -55,24 +55,6 @@ $(document).on("click", function(event) {
 
 // document.querySelector('.radial-progress').setAttribute('data-progress', 68);
 
-// function for search
-// $(document)(function () {
-//     $("#myInput").on("keyup", function () {
-//         var value = $(this).val().toLowerCase();
-//         $(".suggestions__links").filter(function () {
-//             $(this).css('display', 'none')($(this).text().toLowerCase().indexOf(value) > -1)
-//         });
-//     });
-// });
-// let searchText = document.getElementById('myInput').innerText;
-// let searchKeys = document.getElementsByClassName('suggestions_items').innerText;
-// console.log(searchText);
-// console.log(searchKeys);
-// function search() {
-
-// }
-
-
 
 
 //  function for date format
@@ -81,7 +63,7 @@ function dateToString(date) {
     return yangi;
 };
 
-
+// function add elements  to movies card
 function addElements(img, title, date, vote) {
     let element = `<div div class="movies_card" >
                     <a href="#" class="movies_more">...</a>
@@ -127,9 +109,6 @@ fetch(movies)
             let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10);
             moviesInfo.innerHTML += element;
         }
-        // console.log(res);
-
-
     });
 
 
@@ -147,7 +126,6 @@ fetch(popularOnTv)
 
             popOnTv.innerHTML += elem;
         }
-        // console.log(popTv.results[0]);
     })
 
 
@@ -182,4 +160,34 @@ fetch(latest)
             content.innerHTML += element;
         }
         console.log(res)
+    })
+
+
+
+
+// Added top actors  to movie.html from API 
+const movieId = 553604;
+function topActorsUrl(movieId) {
+    return "https://api.themoviedb.org/3/movie/"+movieId+"/credits?api_key=d9835bf16b133db7ae35ff2b1e08b533"
+}
+const actors = topActorsUrl(movieId);
+
+fetch(actors)
+    .then(response => response.json())
+    .then(function(res) {
+        console.log(res.cast);
+        let actors = document.querySelector('.top__billed-inners');
+        for (let i=0; i<res.cast.length; i++){
+            let element = ` <div class="top__billed-items">
+                        <a class="actors__link" href="#"><img class="actors__image" src="https://image.tmdb.org/t/p/w138_and_h175_face/${res.cast[i].profile_path}"
+                                alt="top actors" width="138px" height="175px">
+                        </a>
+                        <a href="#" class="actors__name">
+                            <h4 class="actors__name-link">${res.cast[i].name}</h4>
+                        </a>
+                        <p class="actors__title">${res.cast[i].character}</p>
+                    </div>`;
+            if (res.cast[i].profile_path) actors.innerHTML += element;
+
+        }
     })
