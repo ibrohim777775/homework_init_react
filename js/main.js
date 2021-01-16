@@ -175,7 +175,6 @@ const actors = topActorsUrl(movieId);
 fetch(actors)
     .then(response => response.json())
     .then(function(res) {
-        console.log(res.cast);
         let actors = document.querySelector('.top__billed-inners');
         for (let i=0; i<res.cast.length; i++){
             let element = ` <div class="top__billed-items">
@@ -191,3 +190,26 @@ fetch(actors)
 
         }
     })
+
+
+
+//  Added movie keywords from API
+function urlToMovieKeywords(movieId) {
+    return " https://api.themoviedb.org/3/movie/"+movieId+"/keywords?api_key=d9835bf16b133db7ae35ff2b1e08b533";
+}
+
+const keywordsId = urlToMovieKeywords(553604);
+
+fetch(keywordsId)
+    .then(response => response.json())
+    .then(function(res) {
+        let keys = document.querySelector('.keywords__inners');
+        for (let i=0; i<res.keywords.length; i++){
+            let elem = `<div class="keywords__items">
+                                    <a href="#" class="keywors__link">${res.keywords[i].name}</a>
+                                </div>
+            `;
+            keys.innerHTML += elem;
+        };
+    })
+
