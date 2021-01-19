@@ -166,6 +166,7 @@ input[type="search"]:focus  .suggestions{
 }
 
 .movie_image{
+    width: 94px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     height: 100%;
