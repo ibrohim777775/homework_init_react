@@ -22,8 +22,8 @@ const movieInfoUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=d983
 fetch(movieInfoUrl)
     .then(response => response.json())
     .then(function (res){
-        console.log(res)
-
+        console.log(res);
+        movieImg.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${res.poster_path}`
 
     })
 
