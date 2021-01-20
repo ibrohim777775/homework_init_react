@@ -219,6 +219,9 @@ fetch(keywordsId)
 
 // Functions for search
 
+// clear localstorage
+localStorage.clear();
+
 let inputValue = document.querySelector('.input__search');
 
 inputValue.onkeyup = (e) =>{
