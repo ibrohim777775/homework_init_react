@@ -64,10 +64,10 @@ function dateToString(date) {
 };
 
 // function add elements  to movies card
-function addElements(img, title, date, vote) {
+function addElements(img, title, date, vote, movieid) {
     let element = `<div div class="movies_card" >
                     <a href="#" class="movies_more">...</a>
-                    <img src="https://image.tmdb.org/t/p/w185/${img}" alt="movie" class="movies_bg" width="150px" height="230px">
+                    <a href="movieinfo.html"  onclick="toLocal('movieId', '${movieid}')"><img src="https://image.tmdb.org/t/p/w185/${img}" alt="movie" class="movies_bg" width="150px" height="230px" "></a>
                     <h4 class="movies_title">${title}</h4>
                     <p class="movies_date">${dateToString(date)}</p>
                     <div class="progres">
@@ -106,8 +106,9 @@ fetch(movies)
     .then(function(res) {
         let moviesInfo = document.querySelector('.pop__movies');
         for (let i = 0; i < res.results.length; i++) {
-            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10);
+            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10, res.results[i].id);
             moviesInfo.innerHTML += element;
+        
         }
     });
 
@@ -121,7 +122,7 @@ fetch(popularOnTv)
     .then(function(popTv) {
         let popOnTv = document.querySelector('.pop__Tv');
         for (let i = 0; i < popTv.results.length; i++) {
-            let elem = addElements(popTv.results[i].poster_path, popTv.results[i].name, popTv.results[i].first_air_date, popTv.results[i].vote_average * 10);
+            let elem = addElements(popTv.results[i].poster_path, popTv.results[i].name, popTv.results[i].first_air_date, popTv.results[i].vote_average * 10, popTv.results[i].id);
 
 
             popOnTv.innerHTML += elem;
@@ -138,7 +139,7 @@ fetch(topRated)
     .then(function(res) {
         let topMovies = document.querySelector('.top__rated');
         for (let i = 0; i < res.results.length; i++) {
-            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10);
+            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10,res.results[i].id);
 
             topMovies.innerHTML += element;
         };
@@ -155,7 +156,7 @@ fetch(latest)
     .then(function(res) {
         let content = document.querySelector('.now__playing');
         for (let i = 0; i < res.results.length; i++) {
-            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10);
+            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10, res.results[i].id);
 
             content.innerHTML += element;
         }
@@ -165,62 +166,11 @@ fetch(latest)
 
 
 
-// Added top actors  to movie.html from API 
-const movieId = 553604;
-function topActorsUrl(movieId) {
-    return "https://api.themoviedb.org/3/movie/"+movieId+"/credits?api_key=d9835bf16b133db7ae35ff2b1e08b533"
-}
-const actors = topActorsUrl(movieId);
-
-fetch(actors)
-    .then(response => response.json())
-    .then(function(res) {
-        let actors = document.querySelector('.top__billed-inners');
-        for (let i=0; i<res.cast.length; i++){
-            let element = ` <div class="top__billed-items">
-                        <a class="actors__link" href="#"><img class="actors__image" src="https://image.tmdb.org/t/p/w138_and_h175_face/${res.cast[i].profile_path}"
-                                alt="top actors" width="138px" height="175px">
-                        </a>
-                        <a href="#" class="actors__name">
-                            <h4 class="actors__name-link">${res.cast[i].name}</h4>
-                        </a>
-                        <p class="actors__title">${res.cast[i].character}</p>
-                    </div>`;
-            if (res.cast[i].profile_path) actors.innerHTML += element;
-
-        }
-    })
 
 
-
-//  Added movie keywords from API
-function urlToMovieKeywords(movieId) {
-    return " https://api.themoviedb.org/3/movie/"+movieId+"/keywords?api_key=d9835bf16b133db7ae35ff2b1e08b533";
-}
-
-const keywordsId = urlToMovieKeywords(553604);
-
-fetch(keywordsId)
-    .then(response => response.json())
-    .then(function(res) {
-        let keys = document.querySelector('.keywords__inners');
-        for (let i=0; i<res.keywords.length; i++){
-            let elem = `<div class="keywords__items">
-                                    <a href="#" class="keywors__link">${res.keywords[i].name}</a>
-                                </div>
-            `;
-            keys.innerHTML += elem;
-        };
-    })
-
-
-
-
-
-// Functions for search
 
 // clear localstorage
-localStorage.clear();
+// localStorage.clear();
 
 let inputValue = document.querySelector('.input__search');
 
@@ -235,3 +185,7 @@ function toLocal(key, text) {
     let value = JSON.stringify(text);
     localStorage.setItem(key, value);
 }
+
+
+
+//  movies_bg

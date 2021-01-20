@@ -148,6 +148,9 @@ fetch(urlToSearchMovie)
 .then(response => response.json())
 .then(function (res){
     console.log(res);
+    let resultNumber = document.querySelector('.result__movie');
+    resultNumber.innerText = res.total_results;
+    console.log(resultNumber.innerText);
     let movieCard = document.querySelector('.search__results');
     // let urlimg = movieImage.src();
     for (let i=0; i<res.results.length; i++){
