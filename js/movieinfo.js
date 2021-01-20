@@ -6,6 +6,16 @@ function topActorsUrl(movieId) {
 }
 
 
+let movieImg = document.querySelector('.img');
+let movieTitle = document.querySelector('.movies__title');
+let movieDate = document.querySelector('.movies__made')
+let movieRate = document.querySelector('.radial-progress')
+let movieGanres = document.querySelector('.movie__ganres')
+let movieDuration = document.querySelector('.movie__duration')
+let movieTagline = document.querySelector('.more__text')
+let movieOverview = document.querySelector('.overview__text')
+
+
 
 const movieInfoUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=d9835bf16b133db7ae35ff2b1e08b533&language=en-US`;
 
