@@ -31,7 +31,7 @@
 }
 
 main{
-    background-image: url(../images/movie_bg_small.jpg);
+    /* background-image: url(../images/movie_bg_small.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     /* background-position: center; */

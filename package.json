@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ibrohim777775/homework_init_react#readme",
   "devDependencies": {
+    "g": "^2.0.1",
     "jquery": "^3.5.1",
     "progressbar.js": "^1.1.0"
   }

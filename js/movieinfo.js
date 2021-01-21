@@ -8,23 +8,38 @@ function topActorsUrl(movieId) {
 
 let movieImg = document.querySelector('.img');
 let movieTitle = document.querySelector('.movies__title');
-let movieDate = document.querySelector('.movies__made')
-let movieRate = document.querySelector('.radial-progress')
-let movieGanres = document.querySelector('.movie__ganres')
-let movieDuration = document.querySelector('.movie__duration')
-let movieTagline = document.querySelector('.more__text')
-let movieOverview = document.querySelector('.overview__text')
-
+let movieDate = document.querySelector('.movies__made');
+let movieRate = document.querySelector('.radial-progress');
+let movieDuration = document.querySelector('.movie__duration');
+let movieTagline = document.querySelector('.more__text');
+let movieOverview = document.querySelector('.overview__text');
+let main = document.querySelector('main');
+let revenue = document.querySelector('.info__revenue');
+let budget = document.querySelector('.info__budget');
+let originalLanguage = document.querySelector('.info__language');
 
 
 const movieInfoUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=d9835bf16b133db7ae35ff2b1e08b533&language=en-US`;
 
 fetch(movieInfoUrl)
-    .then(response => response.json())
-    .then(function (res){
-        console.log(res);
-        movieImg.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${res.poster_path}`
-
+.then(response => response.json())
+.then(function (res){
+    console.log(res);
+    movieImg.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${res.poster_path}`;
+    main.style.backgroundImage = "url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/srYya1ZlI97Au4jUYAktDe3avyA.jpg')";
+    movieTitle.innerText = res.title;
+    movieDate.innerText = res.release_date;
+    let movieGanres = document.querySelector('.movie__ganres');
+    for (let i=0; i<res.genres.length; i++){
+        let elem = `<a href="#">${res.genres[i].name},</a>`;
+        movieGanres.innerHTML +=elem;
+    };
+    movieOverview.innerText = res.overview;
+    movieTagline.innerText = res.tagline;
+    revenue.innerText = currency(res.revenue).format();
+    budget.innerText = currency(res.budget).format();
+    originalLanguage.innerText = res.original_language;
+    
     })
 
 
