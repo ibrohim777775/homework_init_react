@@ -26,7 +26,7 @@ fetch(movieInfoUrl)
 .then(function (res){
     console.log(res);
     movieImg.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${res.poster_path}`;
-    main.style.backgroundImage = "url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/srYya1ZlI97Au4jUYAktDe3avyA.jpg')";
+    main.style.backgroundImage = `url('https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/${res.backdrop_path}')`;
     movieTitle.innerText = res.title;
     movieDate.innerText = res.release_date;
     let movieGanres = document.querySelector('.movie__ganres');
