@@ -144,6 +144,14 @@
         border-radius: 4px;
         cursor: pointer;
         margin-right: 20px;
+        padding-top: 7px;
+        transition: all .3s;
+
+    }
+    .for_language:hover {
+        background-color: #fff;
+        color: #000;
+        transition: all .3s;
     }
     
     .for_language-items {
@@ -496,4 +504,50 @@
     .footer_links {
         color: #fff;
         margin-bottom: 7px;
+    }
+
+
+
+    .modal{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: darkcyan;
+    }
+    .modal__body{
+        
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        padding: 50px;
+        background-color: darkturquoise;
+        border-radius: 8px;
+    }
+    .form__title{
+        margin-bottom: 25px;
+    }
+    .form label{
+        font-size: 20px;
+        padding: 5px 0;
+    }
+    .form input {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 5px;
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    .form input:focus{
+        outline: none;
+    }
+
+    .form button{
+        margin-top: 15px;
+        padding: 10px;
+        background-color: lightgreen;
+        border-radius: 8px;
+        cursor: pointer;
     }

@@ -17,6 +17,7 @@ let main = document.querySelector('main');
 let revenue = document.querySelector('.info__revenue');
 let budget = document.querySelector('.info__budget');
 let originalLanguage = document.querySelector('.info__language');
+let vote = document.querySelector('.radial-progress');
 
 
 const movieInfoUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=d9835bf16b133db7ae35ff2b1e08b533&language=en-US`;
@@ -39,6 +40,8 @@ fetch(movieInfoUrl)
     revenue.innerText = currency(res.revenue).format();
     budget.innerText = currency(res.budget).format();
     originalLanguage.innerText = res.original_language;
+    // vote.data-progress = res.vote_average * 10;
+
     
     })
 
