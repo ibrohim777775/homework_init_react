@@ -133,10 +133,10 @@ let newKey = '';
 // };
 
 // function for add value to localstorage
-// function toLocal(key, text) {
-//     let value = JSON.stringify(text);
-//     localStorage.setItem(key, value);
-// };
+function toLocal(key, text) {
+    let value = JSON.stringify(text);
+    localStorage.setItem(key, value);
+};
 
 // add value from localstorage
 // let keyFromLocal = JSON.parse(localStorage.getItem('newKey'));
@@ -146,7 +146,7 @@ let newKey = '';
 //     inputSearch.placeholder = keyFromLocal;
 // }
 // else {
-    
+
 urlToSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${keyForSearch}&include_adult=false`;
 // };
 
