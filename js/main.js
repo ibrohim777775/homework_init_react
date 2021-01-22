@@ -172,19 +172,19 @@ fetch(latest)
 // clear localstorage
 // localStorage.clear();
 
-let inputValue = document.querySelector('.input__search');
+// let inputValue = document.querySelector('.input__search');
 
-inputValue.onkeyup = (e) =>{
-    let value = e.target.value;
-    console.log(value);
-    toLocal('keyforsearch', value);
-    // localStorage.setItem('keyForSearch', value);
-}
+// inputValue.onkeyup = (e) =>{
+//     let value = e.target.value;
+//     console.log(value);
+//     toLocal('keyforsearch', value);
+//     // localStorage.setItem('keyForSearch', value);
+// }
 
-function toLocal(key, text) {
-    let value = JSON.stringify(text);
-    localStorage.setItem(key, value);
-}
+// function toLocal(key, text) {
+//     let value = JSON.stringify(text);
+//     localStorage.setItem(key, value);
+// }
 
 
 

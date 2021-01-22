@@ -217,15 +217,12 @@
     }
     
     .bg_title {
-        /*margin-top: 45px;*/
-        /*margin-bottom: 25px;*/
-        /*position: absolute;*/
-        font-size: 80px;
-        /*transform: scale(2);*/
-        font-weight: bolder;
-        z-index: 2;
+        margin-left: 16%;
+       
         color: #22ef22;
-        margin-bottom: 160px;
+        background-image: url(../images/bgforheader.png);
+        background-repeat: no-repeat;
+        height: 80%;
     }
     
     .bg_text,
@@ -515,9 +512,7 @@
         height: 100vh;
         background-color: darkcyan;
     }
-    .modal__body{
-        
-    }
+    
     .form{
         display: flex;
         flex-direction: column;
@@ -534,7 +529,7 @@
         padding: 5px 0;
     }
     .form input {
-        border: 1px solid #000;
+        border: 1px solid #032540;
         border-radius: 8px;
         padding: 5px;
         font-size: 18px;
@@ -544,10 +539,19 @@
         outline: none;
     }
 
-    .form button{
+    .submit__values{
         margin-top: 15px;
-        padding: 10px;
-        background-color: lightgreen;
+        padding: 15px;
+        font-size: 20px;
+        border: none;
+        font-weight: 600;
+        background-color: #0689f5;
         border-radius: 8px;
         cursor: pointer;
+        transition: all .5ms;
     }
+    .submit__values:hover {
+        opacity: .9;
+        transition: all .5ms;
+    }
+    

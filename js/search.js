@@ -96,9 +96,15 @@ function searchItem(img, title, date, overview){
 
 const api_key = "d9835bf16b133db7ae35ff2b1e08b533"; 
 
+// added key for search from url
+let keyItem = location.search;
+let keyForSearch = keyItem.slice(keyItem.indexOf('=')+1);
+
+
+
 //key for search from index.html
-let keyitem = JSON.parse(localStorage.getItem('keyforsearch'));
-let keyForSearch = keyitem.replace(/ /g, '+'); 
+// let keyitem = JSON.parse(localStorage.getItem('keyforsearch'));
+// let keyForSearch = keyitem.replace(/ /g, '+'); 
 
 // text for search input place holder
 let inputSearch = document.querySelector('.search__text');
@@ -118,30 +124,31 @@ let newKey = '';
 
 
 // for add value from search input to localstorage
-keyForThis.onkeyup = (e) =>{
-    let value = e.target.value.replace(/ /g, '+');
-    console.log(value);
-    newKey = value;
-    toLocal('newKey', value);
-    // localStorage.setItem('keyForSearch', value); 
-};
+// keyForThis.onkeyup = (e) =>{
+//     let value = e.target.value.replace(/ /g, '+');
+//     console.log(value);
+//     newKey = value;
+//     toLocal('newKey', value);
+//     // localStorage.setItem('keyForSearch', value); 
+// };
 
 // function for add value to localstorage
-function toLocal(key, text) {
-    let value = JSON.stringify(text);
-    localStorage.setItem(key, value);
-};
+// function toLocal(key, text) {
+//     let value = JSON.stringify(text);
+//     localStorage.setItem(key, value);
+// };
 
 // add value from localstorage
-let keyFromLocal = JSON.parse(localStorage.getItem('newKey'));
+// let keyFromLocal = JSON.parse(localStorage.getItem('newKey'));
 
-if (keyFromLocal != null){
-    urlToSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${keyFromLocal}&include_adult=false`;
-    inputSearch.placeholder = keyFromLocal;
-}
-else {
-    urlToSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${keyForSearch}&include_adult=false`;
-};
+// if (keyFromLocal != null){
+//     urlToSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${keyFromLocal}&include_adult=false`;
+//     inputSearch.placeholder = keyFromLocal;
+// }
+// else {
+    
+urlToSearchMovie = `https://api.themoviedb.org/3/search/movie?api_key=${api_key}&language=en-US&page=1&query=${keyForSearch}&include_adult=false`;
+// };
 
 
 fetch(urlToSearchMovie)
