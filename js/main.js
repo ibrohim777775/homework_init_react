@@ -181,10 +181,10 @@ fetch(latest)
 //     // localStorage.setItem('keyForSearch', value);
 // }
 
-// function toLocal(key, text) {
-//     let value = JSON.stringify(text);
-//     localStorage.setItem(key, value);
-// }
+function toLocal(key, text) {
+    let value = JSON.stringify(text);
+    localStorage.setItem(key, value);
+}
 
 
 
