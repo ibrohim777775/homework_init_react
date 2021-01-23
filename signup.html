@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style_icomoon.css">
-    <link rel="stylesheet" href="css/progresbar.css">
+    <title>Sign Up The Movie DateBase</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/signup.css">
 </head>
 
 <body>
+
     <header>
         <div class="container">
             <div class="header">
@@ -79,7 +78,7 @@
                             </div>
                         </div>
                         <a class="header_links-inners" href="#">Login</a>
-                        <a class="header_links-inners" href="signup.html">Join TMDb</a>
+                        <a class="header_links-inners" href="#">Join TMDb</a>
                         <div class="right_nav-search"></div>
                     </div>
                 </div>
@@ -88,118 +87,46 @@
     </header>
     <!-- End of header -->
 
-    <div class="search">
-        <div class="container">
-            <div class="search_inners">
-                <div class="bg_title">
-                </div>
-                <p class="bg_text">That's a Wrap</p>
-                <a href="#" class="search_link">Check out the best and the worst from the year &rarr; </a>
-                <form class="search_items" action="search.html">
-                    <input name="key_for_search" type="text" placeholder="Search for a movie, tv show, person"
-                        class="input__search">
-                    <button type="submit"> Search</button>
-                </form>
-            </div>
-        </div>
 
 
-    </div>
-    <!-- End of search -->
-    <main>
-        <div class="container">
+    <div class="modal">
+        <div class="modal__body">
+            <form class="form" method="get">
+                <h2 class="form__title">Sign Up</h2>
 
-            <div class="popular_movies">
-                <div class="tabs">
-                    <div class="tabs_items">
-                        <h2 class="popular_title">What's Popular</h2>
+                <label for="name">Name</label>
+                <input type="text" name="name" title="Please, write your name" required>
 
-                        <ul class="tabs__caption">
-                            <li class="active tabs_title">Streaming</li>
-                            <li class="tabs_title">On TV</li>
-                            <li class="tabs_title">Top Rated Movies</li>
-                            <li class="tabs_title">Now playing movies</li>
 
-                        </ul>
-                    </div>
-                    <div class="tabs__content active">
-                        <div class="tabs_inners pop__movies">
+                <label for="age">Age</label>
+                <input type="number" name="age">
 
-                        </div>
-                    </div>
+                <label for="email">Email</label>
+                <input type="email" name="email" title="Please, write your email" required>
 
-                    <div class="tabs__content">
-                        <div class="tabs_inners pop__Tv">
 
-                        </div>
-                    </div>
 
-                    <div class="tabs__content">
-                        <div class="tabs_inners top__rated">
+                <label for="country">Country</label>
+                <input type="text" name="country">
 
-                        </div>
-                    </div>
+                <label for="login">Login</label>
+                <input type="text" name="login" title="Please, write your login" required>
 
-                    <div class="tabs__content">
-                        <div class="tabs_inners now__playing">
 
-                        </div>
-                    </div>
+                <label for="parol">Password</label>
+                <input type="password" name="parol" title="Please, write your password" required>
 
-                </div>
-                <!-- .tabs-->
-            </div>
+                <label for="pass">Confirm password</label>
+                <input type="password" name="pass" title="Please, confirm your password" required>
 
-            <div class="latest__trailers">
-                <div class="tabs">
-                    <div class="tabs_items">
-                        <h2 class="popular_title">Latest Trailers</h2>
-                        <ul class="tabs__caption">
-                            <li class="active tabs_title">Movies</li>
-                            <li class="tabs_title">On TV</li>
-                        </ul>
-                    </div>
-                    <div class="tabs__content active">
-                        <div class="tabs__inners">
-                            <a href="#"> <img src="" alt="movies"></a>
-                        </div>
-                        fdsfsdfsdvsd
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- End of main -->
-    <div class="join_today">
-        <div class="container">
-            <div class="join_inners">
-                <h3 class="join_title">Join Today</h3>
-                <div class="join_bilmadim">
-                    <div class="join_items">
-                        <p class="join_text">
-                            Get access to maintain your own custom personal lists, track what you've seen and search and
-                            filter for what to watch next—regardless if it's in theatres, on TV or available on popular
-                            streaming services like Netflix, Amazon Prime Video, and ftboolTV.
-                        </p>
-                        <a href="#" class="sign_up">Sign Up</a>
-                    </div>
-                    <div class="join_ul">
-                        <ul>
-                            <li>Enjoy TMDb ad free</li>
-                            <li>Maintain a personal watchlist</li>
-                            <li>Filter by your subscribed streaming services and find something to watch</li>
-                            <li>Log the movies and TV shows you've seen</li>
-                            <li>Build custom lists</li>
-                            <li>Contribute to and improve our database</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+                <button class="submit__values" type="submit">Submit</button>
+
+            </form>
         </div>
     </div>
-    <!-- End of join_today -->
-    <div class="liderboard"></div>
-    <!-- End of liderboard -->
+
+
+
 
     <footer>
         <div class="footer_inners">
@@ -247,14 +174,8 @@
     <!-- End of footer -->
 
 
-
-
-
-    <!-- <script src="node_modules/jquery/dist/jquery.min.js"> </script> -->
-    <!--    <script type="module" src="node_modules/progressbar.js/dist/progressbar.min.js"></script>-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/signup.js"></script>
 </body>
 
 </html>
