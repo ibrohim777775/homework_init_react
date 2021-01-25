@@ -409,10 +409,10 @@
         left: -74px;
     }
     
-    .latest__trailers {
+    /* .latest__trailers {
         height: 358px;
     }
-    
+     */
     .join_inners {
         background-image: url(../images/footer_image.jpg);
         background-size: cover;

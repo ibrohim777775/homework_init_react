@@ -160,7 +160,6 @@ fetch(latest)
 
             content.innerHTML += element;
         }
-        console.log(res)
     })
 
 
@@ -188,4 +187,46 @@ function toLocal(key, text) {
 
 
 
-//  movies_bg
+// Addind todat trand movies from API
+
+const trandThisDay = 'https://api.themoviedb.org/3/trending/movie/day?api_key=d9835bf16b133db7ae35ff2b1e08b533';
+
+fetch (trandThisDay)
+    .then(response => response.json())
+    .then(function(res) {
+        let trand = document.querySelector('.trand__today');
+        for (let i = 0; i < res.results.length; i++) {
+            function getDate() {
+                if (res.results[i].first_air_date){return res.results[i].first_air_date}
+                else {return res.results[i].release_date}
+            };
+            let date = getDate();
+            let element = addElements(res.results[i].poster_path, res.results[i].title, date, res.results[i].vote_average * 10, res.results[i].id);
+
+            trand.innerHTML += element;
+        };
+
+
+    });
+
+// Adding this week trand movies from API
+
+const trandThisWeek = 'https://api.themoviedb.org/3/trending/movie/week?api_key=d9835bf16b133db7ae35ff2b1e08b533';
+
+fetch(trandThisWeek)
+    .then(response => response.json())
+    .then(function(res){
+        let trand = document.querySelector('.trand__week');
+        for (let i = 0; i < res.results.length; i++) {
+            function getDate() {
+                if (res.results[i].first_air_date){return res.results[i].first_air_date}
+                else {return res.results[i].release_date}
+            };
+            let date = getDate();
+            let element = addElements(res.results[i].poster_path, res.results[i].title, date, res.results[i].vote_average * 10, res.results[i].id);
+
+            trand.innerHTML += element;
+        };
+        console.log(res);
+
+    })
