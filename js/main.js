@@ -187,7 +187,7 @@ function toLocal(key, text) {
 
 
 
-// Addind todat trand movies from API
+// Addind todat trend movies from API
 
 const trandThisDay = 'https://api.themoviedb.org/3/trending/movie/day?api_key=d9835bf16b133db7ae35ff2b1e08b533';
 
@@ -209,7 +209,7 @@ fetch (trandThisDay)
 
     });
 
-// Adding this week trand movies from API
+// Adding this week trend movies from API
 
 const trandThisWeek = 'https://api.themoviedb.org/3/trending/movie/week?api_key=d9835bf16b133db7ae35ff2b1e08b533';
 
@@ -230,3 +230,9 @@ fetch(trandThisWeek)
         console.log(res);
 
     })
+
+
+salom();
+function salom2() {
+    return console.log('salom -xayr')
+}

@@ -206,3 +206,4 @@ fetch(urlToSearchMovie)
 // });
 
 // console.log(keyForThis);
+console.log(trandThisWeek);

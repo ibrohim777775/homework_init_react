@@ -1,12 +1,48 @@
- .modal{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: darkcyan;
+    main{
+        margin-top: 40px;
+        margin-bottom: 50px;
     }
+    .main__inners{
+        display: flex;
+        width: 100%;
+    }
+    .signup__about{
+        width: 20%;
+        margin-right: 20px;
+    }
+    .signup__form{
+        width: 80%;
+    }
+    .about__inners{
+        border-radius: 8px;
+        box-shadow: 0 0 4px 0px  #b1b1b1;
+    }
+    .about__title{
+        padding: 20px 0 20px 20px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        font-size: 18px;
+        background: #01B4E4;
+        color: #fff;
+    }
+    .about__inners ul {
+        margin-left: 20px;
+        
+    }
+    .about__text{
+        display: flex;
+        padding: 15px 10px 15px 0;
+        letter-spacing: 1px;
+        line-height: 20px;
+    }
+    .about__text div{
+        margin-right: 5px;
+        font-size: 28px;
+    }
+ 
+  
     .modal__body{
-        width: 600px;
+        width: 100%;
         
     }
     
@@ -15,14 +51,14 @@
         flex-direction: column;
         width: 100%;   
         padding: 50px;
-        background-color: darkturquoise;
+        background-color: #01B4E4;
         border-radius: 8px;
     }
     .form__title{
         margin-bottom: 25px;
     }
     .form label{
-        font-size: 20px;
+        font-size: 18px;
         padding: 5px 0;
     }
     .form input {
@@ -31,6 +67,7 @@
         padding: 5px;
         font-size: 18px;
         padding-left: 15px;
+        margin-bottom: 15px;
     }
     .form input:focus{
         outline: none;
@@ -46,9 +83,15 @@
         border-radius: 8px;
         cursor: pointer;
         transition: all .5ms;
+        color: #fff;
     }
     .submit__values:hover {
         opacity: .9;
         transition: all .5ms;
     }
-    
+    section{
+        margin-bottom: 15px;
+    }
+    .password__validate, .confirm__res{
+        color: red;
+    }

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up The Movie DateBase</title>
+    <link rel="stylesheet" href="css/style_icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/signup.css">
 </head>
@@ -87,42 +88,93 @@
     </header>
     <!-- End of header -->
 
+    <main>
+        <div class="container">
 
+            <div class="main__inners">
+
+                <div class="signup__about">
+                    <div class="about__inners">
+                        <h2 class="about__title">Benefits of being a <br> member</h2>
+                        <ul>
+                            <li class="about__text">
+                                <div>&#10004</div> Find something to watch on your subscribed streaming
+                                services
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Log the movies and TV shows you have watched
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Keep track of your favourite movies and TV shows and get
+                                recommendations from them
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Build and maintain a personal watchlist
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Build custom mixed lists (movies and TV)
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Take part in movie and TV discussions
+                            </li>
+                            <li class="about__text">
+                                <div>&#10004</div>Contribute to, and improve the information in our database
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="signup__form">
+                    <div class="modal__body">
+                        <form class="form" method="get">
+                            <h2 class="form__title">Sign up for an account</h2>
+                            <section>Signing up for an account is free and easy. Fill out the form below to get started.
+                                JavaScript is required to to continue.
+                            </section>
+
+                            <label for="name">Username</label>
+                            <input type="text" name="name" title="Please, write your name" required>
+
+
+                            <label for="age">Age</label>
+                            <input type="number" name="age">
+
+                            <label for="email">Email</label>
+                            <input type="email" name="email" title="Please, write your email" required>
+
+
+
+                            <label for="country">Country</label>
+                            <input type="text" name="country">
+
+                            <label for="login">Login</label>
+                            <input type="text" name="login" title="Please, write your login" required>
+
+
+                            <label for="parol"><b> Password</b> <br>(Password must have at least 8 characters, one lower
+                                case
+                                letter,
+                                one upper case letter, one digit and Password may not contain spaces)</label>
+                            <input class="password" type="password" name="parol" title="Please, write your password"
+                                required>
+                            <div class="password__validate"></div>
+
+                            <label for="pass"><b>Confirm password</b></label>
+                            <input class="password__confirm" type="password" name="pass"
+                                title="Please, confirm your password" required>
+                            <div class="confirm__res"></div>
+
+                            <button class="submit__values" type="submit">Submit</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <div class="modal">
-        <div class="modal__body">
-            <form class="form" method="get">
-                <h2 class="form__title">Sign Up</h2>
 
-                <label for="name">Name</label>
-                <input type="text" name="name" title="Please, write your name" required>
-
-
-                <label for="age">Age</label>
-                <input type="number" name="age">
-
-                <label for="email">Email</label>
-                <input type="email" name="email" title="Please, write your email" required>
-
-
-
-                <label for="country">Country</label>
-                <input type="text" name="country">
-
-                <label for="login">Login</label>
-                <input type="text" name="login" title="Please, write your login" required>
-
-
-                <label for="parol">Password</label>
-                <input type="password" name="parol" title="Please, write your password" required>
-
-                <label for="pass">Confirm password</label>
-                <input type="password" name="pass" title="Please, confirm your password" required>
-
-                <button class="submit__values" type="submit">Submit</button>
-
-            </form>
-        </div>
     </div>
 
 
