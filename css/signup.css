@@ -4,14 +4,14 @@
     }
     .main__inners{
         display: flex;
-        width: 100%;
+        /* width: 100%; */
     }
     .signup__about{
-        width: 20%;
+        max-width: 260px;
         margin-right: 20px;
     }
     .signup__form{
-        width: 80%;
+        max-width: 1000px;
     }
     .about__inners{
         border-radius: 8px;
@@ -92,6 +92,7 @@
     section{
         margin-bottom: 15px;
     }
-    .password__validate, .confirm__res{
+    .password__validate, .res__email, .confirm__res{
         color: red;
+        margin-bottom: 15px;
     }

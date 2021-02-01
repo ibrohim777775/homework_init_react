@@ -43,7 +43,7 @@ function dateToString(date) {
     return yangi;
 };
 
-// funtion for return add movie card items
+// function for return add movie card items
 
 function searchItem(img, title, date, overview){
 

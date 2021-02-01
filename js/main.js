@@ -1,4 +1,7 @@
 "use strict";
+
+import MovieCard from "./movieCard.js";
+// const {MovieCard} = require('MovieCard.js');
 //
 // function showDisplay() {
 //     document.getElementById("for_more-items").style.display="block";
@@ -101,17 +104,19 @@ function addElements(img, title, date, vote, movieid) {
 //  added popular movies from API
 const movies = "https://api.themoviedb.org/3/movie/popular?api_key=d9835bf16b133db7ae35ff2b1e08b533&language=en-US&page=1";
 
-fetch(movies)
-    .then(response => response.json())
-    .then(function(res) {
-        let moviesInfo = document.querySelector('.pop__movies');
-        for (let i = 0; i < res.results.length; i++) {
-            let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10, res.results[i].id);
-            moviesInfo.innerHTML += element;
+// fetch(movies)
+//     .then(response => response.json())
+//     .then(function(res) {
+//         let moviesInfo = document.querySelector('.pop__movies');
+//         for (let i = 0; i < res.results.length; i++) {
+//             let element = addElements(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].vote_average * 10, res.results[i].id);
+//             moviesInfo.innerHTML += element;
         
-        }
-    });
-
+//         }
+//     });
+let popularMovie = new MovieCard('id', 'title', 'release_date', 'poster_path', 'vote_average', movies, '.pop__movies' );
+popularMovie.getData();
+let asfda = new MovieCard('adsd')
 
 
 // added popular on TV from API 

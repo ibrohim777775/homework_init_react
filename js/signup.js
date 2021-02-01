@@ -1,3 +1,4 @@
+// validation password
 function validatePassword(password) {
     if (typeof password !== 'string'){
         return [false, 'Error in validate password'];
@@ -21,15 +22,57 @@ function validatePassword(password) {
 }
 // console.log(validatePassword('salom'))
 
+
+// validation email
+const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+const INPUT = document.querySelector('.email');
+let email = document.querySelector('.res__email');
+function validateEmail(value) {
+  return EMAIL_REGEXP.test(value);
+}
+function updateInput() {
+  if (validateEmail(INPUT.value)){
+        INPUT.style.borderColor = 'green';
+        email.innerText = '';
+  }
+  else {
+        INPUT.style.borderColor = 'red';
+        email.innerText = 'Please, write your email';
+  }
+}
+INPUT.addEventListener('input', updateInput);
+
+
+
 document.querySelector('button').addEventListener('click', (event) => {
     event.preventDefault();
+
     let pas = document.querySelector('.password').value;
+    let email = document.querySelector('.email').value;
     let result = validatePassword(pas);
     let passConfirm = document.querySelector('.password__confirm').value;
     let resultConfirmPassword = document.querySelector('.confirm__res');
     let passRes = document.querySelector('.password__validate');
-    result === true ? (passRes.innerText = 'great password') : passRes.innerText = result[1];
-    if (passConfirm !== pas){resultConfirmPassword.innerText = 'Please repeat your password'};
+
+    if (result === true){ 
+        passRes.innerText = 'great password';
+        passRes.style.color = 'darkgreen';
+        passRes.style.fontWeight = '800';
+
+        passRes.style.marginBottom = '15px';
+
+    }
+    else{
+        passRes.innerText = result[1];
+        passRes.style.color = 'red';
+
+    };
+    if (passConfirm !== pas){
+        resultConfirmPassword.innerText = 'Please repeat your password'
+    }
+    else{
+        resultConfirmPassword.innerText = ' '
+    };
     let getform = document.forms[1].elements;
     // for (let i=0; i<7; i++){
     //     console.log(getform[1])
@@ -48,5 +91,5 @@ document.querySelector('button').addEventListener('click', (event) => {
     myFunction();
 
 
-    console.log(getform);
+    // console.log(getform);
 })
