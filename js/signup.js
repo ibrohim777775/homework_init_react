@@ -48,7 +48,6 @@ document.querySelector('button').addEventListener('click', (event) => {
     event.preventDefault();
 
     let pas = document.querySelector('.password').value;
-    let email = document.querySelector('.email').value;
     let result = validatePassword(pas);
     let passConfirm = document.querySelector('.password__confirm').value;
     let resultConfirmPassword = document.querySelector('.confirm__res');

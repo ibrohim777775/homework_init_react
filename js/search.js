@@ -45,7 +45,7 @@ function dateToString(date) {
 
 // function for return add movie card items
 
-function searchItem(img, title, date, overview){
+function searchItem(img, title, date, overview, movieid){
 
     // let name = title;
     // let date  = res.results[i].first_air_date;
@@ -74,7 +74,7 @@ function searchItem(img, title, date, overview){
     
     let element = ` <div class="search__items">
     <div class="search__img">
-    <a href="movieinfo.html">
+    <a href="movieinfo.html" onclick="toLocal('movieId', ${movieid})">
     <img class="movie_image" src="${image}" width="94px" height="141px"
     alt="movies image">
     </a>
@@ -162,7 +162,7 @@ fetch(urlToSearchMovie)
     // let urlimg = movieImage.src();
     for (let i=0; i<res.results.length; i++){
        
-        let elem  = searchItem(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].overview);
+        let elem  = searchItem(res.results[i].poster_path, res.results[i].title, res.results[i].release_date, res.results[i].overview, res.results[i].id);
         
         movieCard.innerHTML += elem;
     }

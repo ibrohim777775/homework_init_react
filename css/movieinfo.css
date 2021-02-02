@@ -385,7 +385,34 @@ hr{
     border-radius: 4px;
 }
 
+
+
 footer{
     margin-top: 150px;
 }
-
+.reviews{
+    display: flex;
+    padding: 30px;
+}
+.user__link{
+    margin-right: 20px;
+}
+.user__image{
+    border-radius: 50%;
+}
+.reviews__title{
+    color: #000;
+    font-size: 20px;
+    font-weight: 800;
+}
+.user__rating{
+    font-size: 18px;
+}
+.review__text{
+    margin: 20px 20px 20px 0;
+    letter-spacing: 1px;
+    line-height: 22px;
+}
+.user__name{
+    font-weight: 800;
+}
