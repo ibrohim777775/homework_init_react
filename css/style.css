@@ -7,6 +7,7 @@
     
     body {
         font-family: Arial, Helvetica, sans-serif;
+        min-width: 1300px;
     }
     
     a {
